@@ -339,32 +339,13 @@
                         <div class="mb-4">
                             <h2 style="text-align: center">Bienvenido al torneo de futbol</h2>
 
-                            <style>
-                                .container {
-                                    height: 200px;
-                                    position: relative;
-                                    border: 2px solid black;
-                                }
-                                .vertical-center {
-                                    margin: 100px;
-                                    position: center;
-                                    top: 50%;
-                                    -ms-transform: translateY(-50%);
-                                    transform: translateY(-50%);
-                                }
-                            </style>
+                            <a href="{{ URL::route('register') }}" class="btn btn-success"> Inscripcion</a>
+                            <a> || </a>
+{{--                            {{ URL::route('jugador.index') }}--}}
+                            <a href="{{ URL::route('jugador.index_jugador') }}" class="btn btn-success"> Jugadores </a>
+                            <a> || </a>
+                            <a href="{{ URL::route('equipo.index_equipo') }}" class="btn btn-success"> Equipos </a>
 
-                            <div class="container">
-                                <div class="vertical-center">
-
-                                    <a href="{{ URL::route('register') }}" class="btn btn-success"> Inscripcion</a>
-                                    <a> || </a>
-                                    <a href="{{ URL::route('jugador.index_jugador') }}" class="btn btn-success"> Jugador </a>
-                                    <a> || </a>
-                                    <a href="{{ URL::route('equipo.index_equipo') }}" class="btn btn-success"> Equipo </a>
-
-                                </div>
-                            </div>
 
                            <div style="position: relative; width: 600px; height: 800px;">
 
@@ -380,7 +361,8 @@
             </div>
         </div>
 
-        <div class="section-body">
+        <div  class="section-body">
+
             <div class="container-fluid">
                 <div class="row clearfix row-deck">
                     <div class="col-xl-4 col-lg-12 col-md-12">

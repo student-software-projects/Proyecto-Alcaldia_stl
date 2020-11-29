@@ -37,7 +37,7 @@
 
                     <tr>
                         <th>ACTUALIZACIÓN</th>
-                        <td>{{$company->udated_at}}</td>
+                        <td>{{$player->udated_at}}</td>
                     </tr>
                 </table>
                 <a href="#">Regresar</a>

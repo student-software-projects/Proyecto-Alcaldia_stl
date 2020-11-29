@@ -8,7 +8,7 @@ use App\Models\Equipo;
 class EquipoController extends Controller
 {
     public function index(){
-        $equipo=Equipo::all();
+        $equipos=Equipo::all();
         return view('equipo.index',compact('equipo'));
     }
     public function create(){
@@ -16,7 +16,7 @@ class EquipoController extends Controller
     }
 
     public function store(Request $request){
-        $equipo=Equipo::create($request->all());
+        $equipos=Equipo::create($request->all());
         return redirect()->route('equipo.index')->with([
             'message'=>'Se ha creado correctamente la localidad',
             'type'=>'success'
@@ -25,23 +25,23 @@ class EquipoController extends Controller
 
     public function show($id){
         // SELECT * FROM entity WHERE ID = ? 111  FIND
-        $equipo=Localidad::find($id);
-        return view('equipo.show',compact('equipos'));
+        $equipos=Localidad::find($id);
+        return view('equipo.show',compact('equipo'));
     }
 
     public function edit($id){
-        $equipo=Equipo::find($id);
-        return view('equipo.edit',compact('equipos'));
+        $equipos=Equipo::find($id);
+        return view('equipo.edit',compact('equipo'));
     }
     public function update(Request $request, $id){
-        $equipo=Equipo::find($id)->update($request->all());
+        $equipos=Equipo::find($id)->update($request->all());
         return redirect()->route('equipo.index')->with([
             'message'=>'Se ha actualizado correctamente el equipo',
             'type'=>'warning'
         ]);
     }
     public function destroy($id){
-        $equipo=Equipo::find($id)->delete();
+        $equipos=Equipo::find($id)->delete();
         return redirect()->route('.index')->with([
             'message'=>'Se ha eliminado correctamente',
             'type'=>'danger'
