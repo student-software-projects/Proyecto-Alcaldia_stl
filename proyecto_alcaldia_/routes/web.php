@@ -6,9 +6,9 @@ use App\Http\Controllers\JugadorController;
 use App\Http\Controllers\LocalidadController;
 use App\Http\Controllers\UsuarioController;
 
-Route::get('/home', function () {
-    return view('welcome');
-})->name('welcome');
+//Route::get('/home', function () {
+//    return view('welcome');
+//})->name('welcome');
 
 Route::get('/', function () {
     return view('index');
@@ -17,6 +17,11 @@ Route::get('/', function () {
 Route::get('/login', function () {
     return view('login');
 })->name('login');
+
+Route::get('/register',function(){
+    return view ('register');
+})->name('register');
+
 
 ////Routes from EQUIPO
 Route::get('equipo',[EquipoController::class,'index'])->name('equipo.index_equipo');

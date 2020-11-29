@@ -339,11 +339,34 @@
                         <div class="mb-4">
                             <h2 style="text-align: center">Bienvenido al torneo de futbol</h2>
 
-                            <a href="{{ URL::route('login') }}" class="btn btn-success"> Inscripcion</a>
-                            <a> || </a>
-                            <a href="{{ URL::route('jugador.index_jugador') }}" class="btn btn-success"> Jugador </a>
+                            <style>
+                                .container {
+                                    height: 200px;
+                                    position: relative;
+                                    border: 2px solid black;
+                                }
+                                .vertical-center {
+                                    margin: 100px;
+                                    position: center;
+                                    top: 50%;
+                                    -ms-transform: translateY(-50%);
+                                    transform: translateY(-50%);
+                                }
+                            </style>
 
-                            <div style="position: relative; width: 600px; height: 800px;">
+                            <div class="container">
+                                <div class="vertical-center">
+
+                                    <a href="{{ URL::route('register') }}" class="btn btn-success"> Inscripcion</a>
+                                    <a> || </a>
+                                    <a href="{{ URL::route('jugador.index_jugador') }}" class="btn btn-success"> Jugador </a>
+                                    <a> || </a>
+                                    <a href="{{ URL::route('equipo.index_equipo') }}" class="btn btn-success"> Equipo </a>
+
+                                </div>
+                            </div>
+
+                           <div style="position: relative; width: 600px; height: 800px;">
 
                                 <div style="position: absolute; bottom: 1px">
                                     <small>Terminos y condiciones | <a href="#">Leer mas</a></small>
